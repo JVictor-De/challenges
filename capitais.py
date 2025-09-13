@@ -7,12 +7,7 @@
 # o código mostra o número bruto e porcentagem de acertos.
 
 
-capitais = {"Acre": "Rio Branco","Alagoas": "Maceió","Amapá": "Macapá","Amazonas": "Manaus","Bahia": "Salvador","Ceará": "Fortaleza",
-                    "Distrito Federal": "Brasília","Espírito Santo": "Vitória","Goiás": "Goiânia","Maranhão": "São Luís","Mato Grosso": "Cuiabá",
-                    "Mato Grosso do Sul": "Campo Grande","Minas Gerais": "Belo Horizonte","Pará": "Belém","Paraíba": "João Pessoa",
-                    "Paraná": "Curitiba","Pernambuco": "Recife","Piauí": "Teresina","Rio de Janeiro": "Rio de Janeiro","Rio Grande do Norte": "Natal",
-                    "Rio Grande do Sul": "Porto Alegre","Rondônia": "Porto Velho","Roraima": "Boa Vista","Santa Catarina": "Florianópolis",
-                    "São Paulo": "São Paulo","Sergipe": "Aracaju","Tocantins": "Palmas"}
+capitais = {"Acre": "Rio Branco","Alagoas": "Maceió"}
 
 
 acertos = 0
@@ -29,9 +24,8 @@ def verificarResposta(acertos=0, erros=0):
             else:
                 print(f'"Eu sou o mais forte! Não há ninguém mais forte que eu!" A capital de {estado} é {capital}') # VEGETA
                 erros += 1
-            continuar = input("Quer continuar? (Sim ou Não) ")
-            if continuar.strip().lower() == "não":
-                break
+                
+            
 
 
         total = acertos + erros
@@ -39,11 +33,11 @@ def verificarResposta(acertos=0, erros=0):
 
 
         if porcentagem >= 0.7:
-            print("Surpreendente. \n Parece que há um cérebro em você.")
+            print(f"Surpreendente. \n Parece que há um cérebro em você.\n Você acertou {acertos} de {total} perguntas. Sua porcentagem de acertos é de {porcentagem:.2%}")
             break
 
         else:
-            print("'O fracasso é apenas a chance de começar de novo, com mais inteligência.- Henry Ford'.")
+            print(f"'O fracasso é apenas a chance de começar de novo, com mais inteligência.- Henry Ford'.\n Você acertou {acertos} de {total} perguntas. Sua porcentagem de acertos é de {porcentagem}")
             continuar = input("quer continuar o treinamento? (Sim ou não) ")
             if continuar.strip().lower() == "não":
                 break
