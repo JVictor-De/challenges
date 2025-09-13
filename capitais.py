@@ -29,9 +29,10 @@ def verificarResposta(acertos=0, erros=0):
             else:
                 print(f'"Eu sou o mais forte! Não há ninguém mais forte que eu!" A capital de {estado} é {capital}') # VEGETA
                 erros += 1
-                
-            
-
+                print('deseja continuar?')
+                continuar = input("Digite 'sim' para continuar ou 'não' para parar: ")
+                if continuar.strip().lower() == "não":
+                    break
 
         total = acertos + erros
         porcentagem = acertos / total 
